@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All types</title>
+</head>
+<body>
+    <form th:action="@{/ingredients/restock}" method="post">
+
+        <h2>Пополнения запасов</h2>
+        <label for="water"> Water
+            <input type="text" name="water_lvl" id="water"
+                   th:value="${ingredients.get(0).total}">
+        </label><br>
+
+        <label for="milk"> Milk
+            <input type="text" name="milk_lvl" id="milk"
+                   th:value="${ingredients.get(1).total}">
+        </label><br>
+
+        <label for="chocolate"> Chocolate
+            <input type="text" name="chocolate_lvl" id="chocolate"
+                   th:value="${ingredients.get(2).total}">
+        </label><br>
+
+        <label for="sugar"> Sugar
+            <input type="text" name="sugar_lvl" id="sugar"
+                   th:value="${ingredients.get(3).total}">
+        </label><br><br>
+        <button type="submit">Поплнить запасы</button>
+    </form>
+</body>
+</html>

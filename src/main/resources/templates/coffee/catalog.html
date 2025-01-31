@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All types</title>
+</head>
+<body>
+    <div th:each="type : ${allTypes}">
+        <a th:href="@{coffees/{id}(id = ${type.id})}" th:text="|${type.name} заказывали ${type.count} раз|"></a>
+    </div>
+</body>
+</html>
