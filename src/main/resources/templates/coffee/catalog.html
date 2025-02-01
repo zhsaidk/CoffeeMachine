@@ -7,6 +7,10 @@
 <body>
     <div th:each="type : ${allTypes}">
         <a th:href="@{coffees/{id}(id = ${type.id})}" th:text="|${type.name} заказывали ${type.count} раз|"></a>
-    </div>
+    </div><br/>
+
+    <form action="/coffees/create" method="get">
+        <button type="submit">Создать свой рецепт</button>
+    </form>
 </body>
 </html>

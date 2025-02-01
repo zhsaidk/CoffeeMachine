@@ -20,6 +20,14 @@
             </div>
         </div><br>
         <button type="submit">Готовить</button>
+    </form><br>
+
+    <form th:action="@{/coffees}" method="get">
+        <button type="submit">Показать список</button>
+    </form><br>
+
+    <form th:action="@{/coffees/{id}/delete(id=${coffee.id})}" method="post">
+        <button type="submit">Удалить кофе</button>
     </form>
 </body>
 </html>

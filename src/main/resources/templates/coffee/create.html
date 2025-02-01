@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Recipe</title>
+</head>
+<body>
+    <form th:action="@{/coffees/create/do}" method="post">
+
+        <h2>Создание собственного рецепта</h2>
+        <label for="name"> Name
+            <input type="text" name="name" id="name" placeholder="MyCoffee">
+        </label><br>
+
+        <label for="water"> Water
+            <input type="text" name="water_lvl" id="water" placeholder="0">
+        </label><br>
+
+        <label for="milk"> Milk
+            <input type="text" name="milk_lvl" id="milk" placeholder="0">
+        </label><br>
+
+        <label for="chocolate"> Chocolate
+            <input type="text" name="chocolate_lvl" id="chocolate" placeholder="0">
+        </label><br>
+
+        <label for="sugar"> Sugar
+            <input type="text" name="sugar_lvl" id="sugar" placeholder="0">
+        </label><br><br>
+        <button type="submit">Создать</button>
+    </form>
+</body>
+</html>
