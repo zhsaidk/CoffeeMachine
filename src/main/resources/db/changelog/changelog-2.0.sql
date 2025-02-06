@@ -22,7 +22,7 @@ INSERT INTO recipe(coffee_id, mass, ingredient_id) VALUES
     (1, 100, 3),
     (2, 200, 1),
     (2, 250, 4),
-    (2, 300, 4),
+    (2, 300, 2),
     (3, 200, 1),
     (3, 150, 4),
     (3, 50, 3);

@@ -26,7 +26,7 @@ public class RecipeService {
 
     @Transactional
     public List<RecipeReadDto> findById(Integer id) {
-        return recipeRepository.findByCoffeeId(id)
+        return recipeRepository.findRecipeByCoffeeId(id)
                 .stream().map(recipeReadMapper::map)
                 .toList();
     }

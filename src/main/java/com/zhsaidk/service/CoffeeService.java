@@ -41,7 +41,7 @@ public class CoffeeService {
 
     @Transactional
     public void doCoffee(Integer id) {
-        List<Recipe> recipes = recipeRepository.findByCoffeeId(id);
+        List<Recipe> recipes = recipeRepository.findRecipeByCoffeeId(id);
 
         for (Recipe recipe : recipes) {
             Ingredient ingredient = recipe.getIngredient();
@@ -49,9 +49,8 @@ public class CoffeeService {
             if (ingredient.getTotal() < recipe.getMass()) {
                 throw new IllegalStateException("Не хватит ингредиенты");
             }
-
             ingredient.setTotal(ingredient.getTotal() - recipe.getMass());
-            ingredientRepository.save(ingredient);
+            ingredientRepository.saveAndFlush(ingredient);
         }
 
         Coffee coffee = coffeeRepository.findById(id)
