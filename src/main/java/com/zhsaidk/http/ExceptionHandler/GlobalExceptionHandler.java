@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(IllegalStateException.class)
-    public String illegalStateExceptionHandler(Model model){
+    public String illegalStateExceptionHandler(){
         return "redirect:/ingredients";
     }
 }
